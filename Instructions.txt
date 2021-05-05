@@ -1,6 +1,0 @@
-1. Add project-app in frontend to visual studio code.
-2. Add restful-web-services to eclipse.
-3. Run RestfulWebServicesApplication.java in src/main/java.
-4. In command prompt, cd to project-app folder and type "npm start".
-5. Login with username "steven808" and password "default". It has admin role. Another login with username "test" and password "test" also exists with user role. Logins can be created in JwtInMemoryUserDetailsService.java. Encoded password for them can be created in PasswordEncoder.java. Both these files are in src/main/java.
-6. H2 database can be accessed at localhost:8080/h2-console when backend is running. Make sure the JDBC URL is jdbc:h2:mem:testdb.

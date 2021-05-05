@@ -28,7 +28,7 @@ public class ProjectJpaResource {
 	
 	@GetMapping("/jpa/users/{username}/projects")
 	public List<Project> getAllProjects(@PathVariable String username){
-		return projectJpaRepository.findByUsername(username);
+		return projectJpaRepository.findAll();
 	}
 
 	@GetMapping("/jpa/users/{username}/projects/{projectId}")

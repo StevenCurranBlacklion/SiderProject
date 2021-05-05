@@ -12,26 +12,36 @@ import org.springframework.stereotype.Service;
 @Service
 public class JwtInMemoryUserDetailsService implements UserDetailsService {
 
-  static List<JwtUserDetails> inMemoryUserList = new ArrayList<>();
+	static List<JwtUserDetails> inMemoryUserList = new ArrayList<>();
 
-  static {
-    inMemoryUserList.add(new JwtUserDetails(1L, "steven808",
-        "$2a$10$YaYrsKk9f05w39g6crcs9O03SncLumZFDatXGJjNJy0Q6nsgZlHCG", "ROLE_ADMIN"));
-    
-    inMemoryUserList.add(new JwtUserDetails(1L, "test",
-            "$2a$10$zXSOzFkSjTseTGH.VCq.rOlFCLzzC9dEUT/B90sl05Ln81XxjH332", "ROLE_USER"));
-  }
+	static {
+		// Password default
+		inMemoryUserList.add(new JwtUserDetails(1L, "SCurran",
+				"$2a$10$YaYrsKk9f05w39g6crcs9O03SncLumZFDatXGJjNJy0Q6nsgZlHCG", "ROLE_ADMIN"));
 
-  @Override
-  public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-    Optional<JwtUserDetails> findFirst = inMemoryUserList.stream()
-        .filter(user -> user.getUsername().equals(username)).findFirst();
+		// Password default
+		inMemoryUserList.add(new JwtUserDetails(1L, "AClear",
+				"$2a$10$YaYrsKk9f05w39g6crcs9O03SncLumZFDatXGJjNJy0Q6nsgZlHCG", "ROLE_ADMIN"));
 
-    if (!findFirst.isPresent()) {
-      throw new UsernameNotFoundException(String.format("USER_NOT_FOUND '%s'.", username));
-    }
+		// Password default
+		inMemoryUserList.add(new JwtUserDetails(1L, "JJohnson",
+				"$2a$10$YaYrsKk9f05w39g6crcs9O03SncLumZFDatXGJjNJy0Q6nsgZlHCG", "ROLE_USER"));
 
-    return findFirst.get();
-  }
+		// Password test
+		inMemoryUserList.add(new JwtUserDetails(1L, "test",
+				"$2a$10$zXSOzFkSjTseTGH.VCq.rOlFCLzzC9dEUT/B90sl05Ln81XxjH332", "ROLE_USER"));
+	}
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		Optional<JwtUserDetails> findFirst = inMemoryUserList.stream()
+				.filter(user -> user.getUsername().equals(username)).findFirst();
+
+		if (!findFirst.isPresent()) {
+			throw new UsernameNotFoundException(String.format("USER_NOT_FOUND '%s'.", username));
+		}
+
+		return findFirst.get();
+	}
 
 }

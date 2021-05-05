@@ -33,7 +33,7 @@ public class EmployeeJpaResource {
 	
 	@GetMapping("/jpa/users/{username}/employees")
 	public List<Employee> getAllEmployees(@PathVariable String username){
-		return employeeJpaRepository.findByUsername(username);
+		return employeeJpaRepository.findAll();
 	}
 
 	@GetMapping("/jpa/users/{username}/employees/{employeeId}")
