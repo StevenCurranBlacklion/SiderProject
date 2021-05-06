@@ -93,6 +93,7 @@ class ListProjectsComponent extends Component {
                         <tr>
                             <th>id</th>
                             <th>Description</th>
+                            <th>Manager</th>
                             <th>Target Date</th>
                             <th>Completed?</th>
                             <th>View Employees</th>
@@ -108,6 +109,7 @@ class ListProjectsComponent extends Component {
                                     <tr key={project.projectId}>
                                         <td>{project.projectId}</td>
                                         <td>{project.description}</td>
+                                        <td>{project.username}</td>
                                         <td>{moment(project.targetDate).format('YYYY-MM-DD')}</td>
                                         <td>{project.done.toString()}</td>
                                         <td><button className="btn btn-success" onClick={() => this.addEmployeesClicked(project.projectId)}>View Employees</button></td>

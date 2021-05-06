@@ -88,6 +88,7 @@ class ListEmployeesComponent extends Component {
                             <th>id</th>
                             <th>First Name</th>
                             <th>Last Name</th>
+                            <th>Manager</th>
                             <th>Project ID</th>
                             <th>Task ID</th>
                             <th>View Skills</th>
@@ -103,6 +104,7 @@ class ListEmployeesComponent extends Component {
                                         <td>{employee.employeeId}</td>
                                         <td>{employee.first_name}</td>
                                         <td>{employee.last_name}</td>
+                                        <td>{employee.username}</td>
                                         <td>{employee.projectId}</td>
                                         <td>{employee.task_id}</td>
                                         <td><button className="btn btn-success" onClick={() => this.addSkillsClicked(employee.employeeId)}>View Skills</button></td>
