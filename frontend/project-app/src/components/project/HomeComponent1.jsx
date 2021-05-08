@@ -20,7 +20,7 @@ class HomeComponent1 extends Component {
                 <h1>SiderProject</h1>
                 <div className="container">
                     Welcome back.
-                    You can manage your projects <Link to="/projects">here</Link> or employees <Link to="/employees">here</Link>.
+                    You can view or manage projects <Link to="/projects">here</Link> and employees <Link to="/employees">here</Link>.
                 </div>
             </div>
         )
