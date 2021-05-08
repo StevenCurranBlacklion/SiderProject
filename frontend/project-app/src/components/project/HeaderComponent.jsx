@@ -9,9 +9,9 @@ class HeaderComponent extends Component {
         return (
             <header>
                 <nav className = "navbar navbar-expand-md navbar-dark bg-dark">
-                    <div><a href="https://docdro.id/3iOoDIC" className="navbar-brand">SiderProject</a></div>
+                    <div><a href="/logout" onClick={AuthenticationService.logout} className="navbar-brand">SiderProject</a></div>
                     <ul className="navbar-nav">
-                        {isUserLoggedIn && <li><Link className="nav-link" to="/home/steven808">Home</Link></li>}
+                        {isUserLoggedIn && <li><Link className="nav-link" to="/home">Home</Link></li>}
                         {isUserLoggedIn && <li><Link className="nav-link" to="/projects">Projects</Link></li>}
                         {isUserLoggedIn && <li><Link className="nav-link" to="/employees">Employees</Link></li>}
                     </ul>

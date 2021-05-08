@@ -101,9 +101,9 @@ class SkillComponent extends Component {
                                         <br />
                                         <Field as="select" name="level">
                                             <option value=''></option>
-                                            <option value="beginner">Beginner</option>
-                                            <option value="mid-level">Mid-Level</option>
-                                            <option value="expert">Expert</option>
+                                            <option value="Beginner">Beginner</option>
+                                            <option value="Mid-Level">Mid-Level</option>
+                                            <option value="Expert">Expert</option>
                                         </Field>
                                     </fieldset>
                                     <button className="btn btn-success" type="submit">Save</button>

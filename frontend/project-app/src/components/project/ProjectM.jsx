@@ -8,6 +8,7 @@ import LogoutComponent from './LogoutComponent.jsx'
 import ListProjectsComponent from './ListProjectsComponent.jsx'
 import ErrorComponent from './ErrorComponent.jsx'
 import HomeComponent from './HomeComponent.jsx'
+import HomeComponent1 from './HomeComponent1.jsx'
 import ProjectComponent from './ProjectComponent.jsx'
 import EmployeeComponent from './EmployeeComponent.jsx'
 import ListEmployeesComponent from './ListEmployeesComponent.jsx'
@@ -27,6 +28,7 @@ class ProjectM extends Component {
                         <Route path ="/" exact component={LoginComponent}/>
                         <Route path ="/login" component={LoginComponent}/>
                         <AuthenticatedRoute path ="/home/:name" component={HomeComponent}/>
+                        <AuthenticatedRoute path ="/home" component={HomeComponent1}/>
                         <AuthenticatedRoute path="/employees/:employeeId/skills/:skill_id" component={SkillComponent}/>
                         <AuthenticatedRoute path ="/employees/:employeeId/skills" component={ListSkillsComponent}/>
                         <AuthenticatedRoute path="/employees/:employeeId" component={EmployeeComponent}/>
